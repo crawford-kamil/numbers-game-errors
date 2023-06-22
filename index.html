@@ -46,7 +46,7 @@
 
   const guesses = document.querySelector('.guesses');
   const lastResult = document.querySelector('.lastResult');
-  const lowOrHi = document.querySelector('lowOrHi');
+  const lowOrHi = document.querySelector('.lowOrHi');
   const guessSubmit = document.querySelector('.guessSubmit');
   const guessField = document.querySelector('.guessField');
 
@@ -78,13 +78,12 @@
         lowOrHi.textContent = 'Last guess was too high!';
       }
     }
-}
 
     guessCount++;
     guessField.value = '';
     guessField.focus();
-  
-  guessSubmit.addEventListener('click', checkGuess());
+  }
+  guessSubmit.addEventListener('click', checkGuess);
 
   function setGameOver() {
 	  guessField.disabled = true;
